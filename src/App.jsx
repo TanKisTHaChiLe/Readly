@@ -6,6 +6,7 @@ import States from "./pages/States2/mainContent.jsx";
 import Home from "./pages/Home/Home.jsx";
 import About from "./pages/About/about.jsx";
 import Login from "./pages/Login/login.jsx";
+import Authorisation from "./pages/Login/authorisation.jsx";
 import SharedLayout from "./pages/SharedLayout";
 import SharedStatesLayout from "./pages/States2/SharedStates.jsx";
 import CreateState from "./pages/CreateState/createState.jsx";
@@ -20,8 +21,14 @@ const App = observer(() => {
         <Route path="states/:stateId" element={<SingleState />} />
         <Route path="about" element={<About />} />
       </Route>
-      <Route path="login" element={<Login />} />
+      <Route path="login">
+        <Route index element={<Login />}/>
+        <Route path="authorisation" element={<Authorisation/>} />
+      </Route>
+        
+      
       <Route path="create" element={<CreateState />} />
+      
     </Routes>
   );
 });

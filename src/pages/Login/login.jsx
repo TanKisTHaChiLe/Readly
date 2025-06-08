@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import GoBack from "../../components/goBack";
 const Login = () => {
   const navigate = useNavigate();
@@ -63,10 +64,10 @@ const Login = () => {
             <button type="submit" className="button form__button">
               Войти
             </button>
-            <a className="form_link form_registration-link">
+            <Link to="authorisation" className="form_link form_registration-link">
               Нет аккаунта?
               <span className="decorated_text-link">Зарегистрироваться</span>
-            </a>
+            </Link>
           </form>
         </div>
       </section>

@@ -17,9 +17,10 @@ const App = observer(() => {
         <Route index element={<Home />} />
         <Route path="states" element={<SharedStatesLayout />}>
           <Route index element={<States />} />
-        </Route>
-        <Route path="states/:stateId" element={<SingleState />} />
+          <Route path=":stateId" element={<SingleState />} />
+        </Route>       
         <Route path="about" element={<About />} />
+        <Route path="create" element={<CreateState />} />
       </Route>
       <Route path="login">
         <Route index element={<Login />}/>
@@ -27,7 +28,7 @@ const App = observer(() => {
       </Route>
         
       
-      <Route path="create" element={<CreateState />} />
+      
       
     </Routes>
   );

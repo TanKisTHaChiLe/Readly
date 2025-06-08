@@ -49,7 +49,6 @@ const articlesData = [
     date: "2023-06-20",
     author: "Петр Петров"
   }
-  // Добавьте другие статьи по аналогии
 ];
 
 export default articlesData;

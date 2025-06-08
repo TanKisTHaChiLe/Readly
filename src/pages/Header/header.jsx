@@ -1,9 +1,28 @@
 import { useRootStore } from "../../stores/RootProvider";
-import { NavLink } from "react-router-dom";
+import { useState,useEffect } from "react";
+import { NavLink, useNavigate,useLocation } from "react-router-dom";
 import { observer } from "mobx-react";
 import viteLogo from "../../assets/react.svg";
 const Header = observer(() => {
   const store = useRootStore().articleStore;
+  const navigate = useNavigate();
+  const [isCreating, setIsCreating] = useState(false);
+  const hadleClick = () => {
+    if(isCreating){
+      setIsCreating(false);
+      navigate(-1);
+    } else{
+      setIsCreating(true);
+      navigate("create");
+    }
+  }
+  const location = useLocation();
+ useEffect(() => {
+    if (location.pathname !== '/create') {
+      setIsCreating(false);
+    }
+  }, [location]);
+
   return (
     <header className="header">
       <div className="navigation_content">
@@ -20,7 +39,7 @@ const Header = observer(() => {
         <NavLink className="login-btn" to="login">
           Войти
         </NavLink>
-        <NavLink className="create-article-btn" to="create">Создать статью</NavLink>
+        <button className="create-article-btn" onClick={hadleClick}>{isCreating ? "Отмена" : "Создать статью"}</button>
       </div>
     </header>
   );

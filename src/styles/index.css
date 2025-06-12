@@ -1,5 +1,9 @@
+@import url('../fonts/fonts.css');
+@import url('./create_state/section_create.css');
+
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

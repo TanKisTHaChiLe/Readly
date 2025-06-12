@@ -15,17 +15,32 @@ const CreateState = () => {
         <div className="preview_state">
           <h2 className="preview_state-title">Предосмотр</h2>
           <button className="preview_state-button">
-            <span></span>Предосмотр статьи
+             <span className="icon_preview-button"></span>Предосмотр статьи
           </button>
         </div>
         <div className="recommendations">
-          <h2>Советы по написанию</h2>
-          <ul>
-            <li>Используйте заголовок, который привлечет внимание читателя</li>
-            <li>Разбивайте текст на небольшие абзацы для лучшего восприятия</li>
-            <li>Добавляйте подзаголовки для структурирования контента</li>
-            <li>Используйте изображения для иллюстрации ключевых моментов</li>
-            <li>Завершите статью выводом или призывом к действию</li>
+          <h2 className="recommendations_title">Советы по написанию</h2>
+          <ul className="recommendations_list">
+            <li className="recommendations_list-item">
+              <span className="icon_list-item"></span>
+              Используйте заголовок, который привлечет внимание читателя
+            </li>
+            <li className="recommendations_list-item">
+              <span className="icon_list-item"></span>
+              Разбивайте текст на небольшие абзацы для лучшего восприятия
+            </li>
+            <li className="recommendations_list-item">
+              <span className="icon_list-item"></span>
+              Добавляйте подзаголовки для структурирования контента
+            </li>
+            <li className="recommendations_list-item">
+              <span className="icon_list-item"></span>
+              Используйте изображения для иллюстрации ключевых моментов
+            </li>
+            <li className="recommendations_list-item">
+              <span className="icon_list-item"></span>
+              Завершите статью выводом или призывом к действию
+            </li>
           </ul>
         </div>
       </div>

@@ -1,5 +1,37 @@
 .recommendations {
-     padding: 32px;
-    border-radius: 16px;
-    background-color: #fff;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+
+.recommendations_title {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #000;
+  margin-block-end: 16px;
+}
+
+.recommendations_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  position: relative;
+}
+
+.recommendations_list-item {
+  font-weight: 400;
+  font-size: 14px;
+  color: #374151;
+  display: flex;
+  gap: 8px;
+}
+
+.icon_list-item {
+  display: block;
+  background-image: url("../../../images/Vector.svg");
+  margin-top: 2px;
+  min-width: 14px;
+  width: 14px;
+  height: 14px;
 }

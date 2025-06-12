@@ -1,6 +1,46 @@
 .preview_state {
-    padding: 32px;
+    padding: 16px;
     border-radius: 16px;
     background-color: #fff;
     margin-block-end: 25px;
+    
+}
+
+.preview_state-title {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #000;
+    margin-block-end: 16px;
+}
+
+.preview_state-button {
+    border:none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border-radius: 6px;
+    padding: 10px 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #f0f0f0;
+    transition: background-color 0.2s;
+}
+
+.preview_state-button:hover {
+    cursor: pointer;
+    background-color: rgba(224, 217, 217, 0.664);
+}
+
+.icon_preview-button {
+    display: block;
+    background-image: url('../../../images/Vector2.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 18px;
+    width: 18px;
+    height: 18px;
 }

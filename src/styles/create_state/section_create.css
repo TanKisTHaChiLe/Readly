@@ -5,7 +5,7 @@
 .section_create-state {
     display: grid;
     column-gap: 30px;
-    grid-template-columns:  1fr 256px;
+    grid-template-columns:  1fr 272px;
     padding: 32px 16px;
     margin-inline: 40px;
 }

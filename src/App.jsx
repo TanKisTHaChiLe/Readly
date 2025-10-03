@@ -18,18 +18,14 @@ const App = observer(() => {
         <Route path="states" element={<SharedStatesLayout />}>
           <Route index element={<States />} />
           <Route path=":stateId" element={<SingleState />} />
-        </Route>       
+        </Route>
         <Route path="about" element={<About />} />
         <Route path="create" element={<CreateState />} />
       </Route>
       <Route path="login">
-        <Route index element={<Login />}/>
-        <Route path="authorisation" element={<Authorisation/>} />
+        <Route index element={<Login />} />
+        <Route path="authorisation" element={<Authorisation />} />
       </Route>
-        
-      
-      
-      
     </Routes>
   );
 });

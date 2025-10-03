@@ -64,7 +64,10 @@ const Login = () => {
             <button type="submit" className="button form__button">
               Войти
             </button>
-            <Link to="authorisation" className="form_link form_registration-link">
+            <Link
+              to="authorisation"
+              className="form_link form_registration-link"
+            >
               Нет аккаунта?
               <span className="decorated_text-link">Зарегистрироваться</span>
             </Link>

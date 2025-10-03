@@ -23,14 +23,12 @@ const Authorisation = () => {
 
   const hadlerSubmitForm = (e) => {
     e.preventDefault();
-    
-    // Проверяем совпадение паролей
+
     if (password !== confirmPassword) {
       setError("Пароли не совпадают");
       return;
     }
-    
-    // Если пароли совпадают, очищаем ошибку и продолжаем
+
     setError("");
     navigate(-1);
   };
@@ -80,7 +78,11 @@ const Authorisation = () => {
                 onChange={handleConfirmPasswordChange}
               />
             </label>
-            {error && <p className="error-message" style={{color: 'red'}}>{error}</p>}
+            {error && (
+              <p className="error-message" style={{ color: "red" }}>
+                {error}
+              </p>
+            )}
             <button type="submit" className="button form__button">
               Зарегистрироваться
             </button>

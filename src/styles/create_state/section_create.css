@@ -1,11 +1,18 @@
-@import url('./creator_state/creator_state.css');
-@import url('./preview_state/preview_state.css');
-@import url('./recommendations/recommendations.css');
+@import url("./creator_state/creator_state.css");
+@import url("./preview_state/preview_state.css");
+@import url("./recommendations/recommendations.css");
 
 .section_create-state {
-    display: grid;
-    column-gap: 30px;
-    grid-template-columns:  1fr 272px;
-    padding: 32px 16px;
-    margin-inline: 40px;
+  display: grid;
+  column-gap: 30px;
+  grid-template-columns: 1fr 272px;
+  padding: 32px 16px;
+  margin-inline: 40px;
+}
+
+.state_creator-title {
+  color: #111827;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-block-end: 24px;
 }

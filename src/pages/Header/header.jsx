@@ -1,25 +1,32 @@
 import { useRootStore } from "../../stores/RootProvider";
-import { useState,useEffect } from "react";
-import { NavLink, useNavigate,useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { observer } from "mobx-react";
 import viteLogo from "../../assets/react.svg";
 const Header = observer(() => {
   const store = useRootStore().articleStore;
   const navigate = useNavigate();
   const [isCreating, setIsCreating] = useState(false);
-  const hadleClick = () => {
-    if(isCreating){
+  const hadleCreateClick = () => {
+    if (isCreating) {
       setIsCreating(false);
       navigate(-1);
-    } else{
+    } else {
       setIsCreating(true);
       navigate("create");
     }
-  }
+  };
+
+  const handleLoginClick = () => {
+    navigate("login");
+  };
+
   const location = useLocation();
- useEffect(() => {
-    if (location.pathname !== '/create') {
+  useEffect(() => {
+    if (location.pathname !== "/create") {
       setIsCreating(false);
+    } else {
+      setIsCreating(true);
     }
   }, [location]);
 
@@ -30,16 +37,39 @@ const Header = observer(() => {
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <nav className="navigation">
-          <NavLink to="/" className={({ isActive }) => (isActive ? "link link_active" : "link")}>Главная</NavLink>
-          <NavLink to="states" className={({ isActive }) => (isActive ? "link link_active" : "link")}>Статьи</NavLink>
-          <NavLink to="about" className={({ isActive }) => (isActive ? "link link_active" : "link")}>О нас</NavLink>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "link link_active" : "link"
+            }
+          >
+            Главная
+          </NavLink>
+          <NavLink
+            to="states"
+            className={({ isActive }) =>
+              isActive ? "link link_active" : "link"
+            }
+          >
+            Статьи
+          </NavLink>
+          <NavLink
+            to="about"
+            className={({ isActive }) =>
+              isActive ? "link link_active" : "link"
+            }
+          >
+            О нас
+          </NavLink>
         </nav>
       </div>
       <div className="navbar-auth">
-        <NavLink className="login-btn" to="login">
+        <button className="login-btn" onClick={handleLoginClick}>
           Войти
-        </NavLink>
-        <button className="create-article-btn" onClick={hadleClick}>{isCreating ? "Отмена" : "Создать статью"}</button>
+        </button>
+        <button className="create-article-btn" onClick={hadleCreateClick}>
+          {isCreating ? "Отмена" : "Создать статью"}
+        </button>
       </div>
     </header>
   );

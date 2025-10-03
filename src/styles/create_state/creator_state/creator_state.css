@@ -1,5 +1,62 @@
 .state_creator {
-    background-color: #fff;
-    border-radius: 16px;
-    padding: 16px;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.form_creator-state {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.form_label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.caption__form_label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #374151;
+}
+
+.create_form_input {
+  border: rgb(209 213 219) solid 1px;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.create_form_input::placeholder {
+  color: rgb(160, 164, 171);
+  opacity: 1;
+}
+
+.create_form_input:-ms-input-placeholder {
+  color: rgb(160, 164, 171);
+}
+
+.create_form_input::-webkit-input-placeholder {
+  color: rgb(160, 164, 171);
+}
+
+.choosing_category {
+  border: rgb(209 213 219) solid 1px;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 1rem;
+}
+
+label:hover {
+  color: inherit;
+  background: none;
+  cursor: default;
 }

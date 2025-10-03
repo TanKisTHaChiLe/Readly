@@ -3,10 +3,9 @@ import Header from "./Header/header";
 const SharedLayout = () => {
   return (
     <>
-      <Header/>
+      <Header />
       <Outlet />
     </>
-   
   );
 };
 export default SharedLayout;
